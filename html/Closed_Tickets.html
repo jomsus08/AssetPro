@@ -29,7 +29,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;}
   <!-- SIDEBAR -->
  <div x-data="{ sidebarContent: '' }"
      x-init="
-        fetch('/sidebar.html')
+        fetch('sidebar.html')
             .then(response => {
                 if (!response.ok) throw new Error('File not found');
                 return response.text();
@@ -101,4 +101,5 @@ body{font-family:'Plus Jakarta Sans',sans-serif;}
 <script>lucide.createIcons()</script>
 </body>
 </html>
+
 
