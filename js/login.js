@@ -129,14 +129,15 @@ window.authApp = () => ({
       console.warn('Logging failed but login succeeded', err);
     }
 
-    // Alert first, then redirect
-    alert(`✅ Welcome back, ${user.username}!`);
-    if (user.role.toLowerCase() === 'administrator') {
-      window.location.href = '/index.html';
-    } else {
-      window.location.href = 'html/tickets.html';
-    }
-  },
+// Alert first, then redirect
+alert(`✅ Welcome back, ${user.username}!`);
+
+if (user.role.toLowerCase() === 'administrator') {
+  window.location.href = '../index.html';
+} else {
+  window.location.href = '../html/tickets.html';
+}
+
 
   cancelChange() {
     this.showModal = false;
@@ -151,3 +152,4 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.lucide) lucide.createIcons();
 
 });
+
