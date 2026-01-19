@@ -62,7 +62,7 @@
         </a>
 
         <!-- ASSETS -->
-        <a href="/html/assets.html"
+        <a href="html/assets.html"
             class="menu-link flex items-center p-3 rounded-xl font-bold transition-all duration-200"
               :class="[
                 window.location.pathname.includes('assets.html') ? 'bg-blue-600 shadow-md text-white' : 'hover:bg-slate-100 text-black',
@@ -73,7 +73,7 @@
         </a>
 
         <!-- TICKETS -->
-        <a href="/html/tickets.html"
+        <a href="html/tickets.html"
             class="menu-link flex items-center p-3 rounded-xl font-bold transition-all duration-200"
             :class="[
                 window.location.pathname.includes('tickets.html') ? 'bg-blue-600 shadow-md text-white' : 'hover:bg-slate-100 text-black',
@@ -91,7 +91,7 @@
         <div class="border-t my-4 mx-2" x-show="isCollapsed"></div>
 
         <!-- ACCOUNTS -->
-        <a href="/html/accounts.html" 
+        <a href="html/accounts.html" 
             class="menu-link flex items-center p-3 rounded-xl font-bold transition-all duration-200"
             :class="[
                 role !== 'Administrator' ? 'opacity-30 pointer-events-none' : 'hover:bg-slate-100',
@@ -103,7 +103,7 @@
         </a>
 
         <!-- ADMIN PANEL -->
-        <a href="/html/admin.html" 
+        <a href="html/admin.html" 
             class="menu-link flex items-center p-3 rounded-xl font-bold transition-all duration-200"
             :class="[
                 role !== 'Administrator' ? 'opacity-30 pointer-events-none' : 'hover:bg-slate-100',
@@ -115,7 +115,7 @@
         </a>
 
         <!-- SETTINGS -->
-        <a href="/html/settings.html" 
+        <a href="html/settings.html" 
             class="menu-link flex items-center p-3 rounded-xl font-bold transition-all duration-200"
             :class="[
                 role !== 'Administrator' ? 'opacity-30 pointer-events-none' : 'hover:bg-slate-100',
@@ -128,7 +128,7 @@
 
         <!-- LOGOUT -->
         <div class="mt-auto pt-10 border-t">
-            <button @click="localStorage.clear(); window.location.href='/html/login.html'"
+            <button @click="localStorage.clear(); window.location.href='html/login.html'"
                 class="flex items-center p-3 rounded-xl text-red-600 font-bold hover:bg-red-50 transition-all duration-200 w-full"
                 :class="isCollapsed ? 'justify-center' : 'gap-4'">
                 <i data-lucide="log-out" class="min-w-[24px]"></i> 
@@ -270,3 +270,4 @@
 
 </body>
 </html>
+
