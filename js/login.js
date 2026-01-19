@@ -134,7 +134,7 @@ window.authApp = () => ({
     if (user.role.toLowerCase() === 'administrator') {
       window.location.href = '/index.html';
     } else {
-      window.location.href = '/html/tickets.html';
+      window.location.href = 'html/tickets.html';
     }
   },
 
@@ -149,4 +149,5 @@ window.authApp = () => ({
 // Initialize Lucide icons
 document.addEventListener('DOMContentLoaded', () => {
   if (window.lucide) lucide.createIcons();
+
 });
