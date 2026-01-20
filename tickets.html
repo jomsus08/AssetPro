@@ -108,7 +108,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;}
   </div>
 
   <!-- ================= MODAL ================= -->
-<div x-show="showTicketModal" class="fixed inset-0 bg-black/30 flex items-center justify-center z-50">
+<div x-show="showTicketModal" style="display: none;" class="fixed inset-0 bg-black/30 flex items-center justify-center z-50">
   <div class="bg-white rounded-2xl w-1/2 p-6 shadow-lg">
     <h2 class="text-xl font-bold mb-4" x-text="editMode ? 'Edit Ticket' : 'Add Ticket'"></h2>
 
@@ -194,3 +194,4 @@ body{font-family:'Plus Jakarta Sans',sans-serif;}
 
 </body>
 </html>
+
