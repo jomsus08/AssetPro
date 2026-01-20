@@ -119,11 +119,22 @@ function accountsApp() {
       } 
       // 4️⃣ Edit Existing User Mode
       else {
+        
+        // 🔐 Hash the password using SHA-256
+        const hashedPassword = await (async (password) => {
+          const encoder = new TextEncoder();
+          const data = encoder.encode(password);
+          const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+          const hashArray = Array.from(new Uint8Array(hashBuffer));
+          return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        })(this.password);
         const { error } = await this.db.from('users')
           .update({
             username: this.currentUser.username,
             email: this.currentUser.email,
-            role: this.currentUser.role
+            role: this.currentUser.role,
+              password: hashedPassword,
+          must_change_password: this.mustChangePassword
           })
           .eq('id', this.currentUser.id);
 
