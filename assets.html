@@ -154,7 +154,7 @@
             </table>
         </div>
 
-        <div x-show="showAddModal" x-cloak class="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+        <div x-show="showAddModal" style="display: none;" x-cloak class="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
             <div @click.away="showAddModal=false" class="bg-white p-8 rounded-2xl w-full max-w-md shadow-2xl">
                 <h3 class="font-bold text-xl mb-4" x-text="editMode ? 'Edit Asset' : 'Add Asset'"></h3>
 
@@ -224,5 +224,6 @@
 
     <script>lucide.createIcons()</script>
     </body>
+
 
 </html>
